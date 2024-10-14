@@ -1,7 +1,6 @@
 import Footer from "../Home/Footer";
 import Nav from "../Home/Nav";
 
-
 const projectsData = [
   {
     category: "Machine Learning and AI",
@@ -70,22 +69,25 @@ const projectsData = [
   }
 ];
 
-
-
 const ProjectCard = ({ name, description, link }) => (
-  <div className="bg-white p-4 border rounded-lg shadow-lg mb-4">
-    <h3 className="text-xl font-semibold text-gray-900">{name}</h3>
-    <p className="text-gray-700">{description}</p>
-    <a href={link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline mt-2 inline-block">
+  <div className="bg-gray-800 p-6 border border-gray-700 rounded-lg shadow-lg mb-6 flex flex-col justify-between">
+    <h3 className="text-xl font-semibold text-white mb-2">{name}</h3>
+    <p className="text-gray-300 flex-grow">{description}</p>
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-400 hover:text-blue-300 hover:underline mt-4"
+    >
       {name} GitHub Repository
     </a>
   </div>
 );
 
 const ProjectsCategory = ({ category, projects }) => (
-  <div className="mb-8">
-    <h2 className="text-2xl font-bold mb-4 w-[100%]">{category}</h2>
-    <div>
+  <div className="mb-16">
+    <h2 className="text-3xl font-bold text-white mb-6 text-center">{category}</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {projects.map((project, index) => (
         <ProjectCard key={index} name={project.name} description={project.description} link={project.link} />
       ))}
@@ -94,12 +96,17 @@ const ProjectsCategory = ({ category, projects }) => (
 );
 
 const Topics = () => (
-  <div className="container mx-auto px-4 py-8 bg-black w-[100%]">
-  <Nav />
-    {projectsData.map((category, index) => (
-      <ProjectsCategory key={index} category={category.category} projects={category.projects} />
-    ))}
-    <Footer/>
+  <div className="bg-black">
+    <Nav />
+  <div className="min-h-screen flex flex-col items-center bg-black px-4 py-12">
+    
+    <div className="container max-w-7xl mx-auto flex flex-col justify-center">
+      {projectsData.map((category, index) => (
+        <ProjectsCategory key={index} category={category.category} projects={category.projects} />
+      ))}
+    </div>
+    <Footer />
+  </div>
   </div>
 );
 

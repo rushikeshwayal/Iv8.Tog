@@ -5,7 +5,7 @@ import Footer from './Home/Footer';
 import Nav from './Home/Nav';
 const AboutUs = () => {
   return (
-    <div>
+    <div className='bg-black'>
     <Nav/>
     <div className="bg-black py-12">
       <div className="container mx-auto px-4 text-center">

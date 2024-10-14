@@ -14,9 +14,9 @@ function Nav() {
                     <li>
                         <a href="/projects">Projects</a>
                     </li>
-                    <li>
+                    {/* <li>
                         <a href="/mentors">Mentor</a>
-                    </li>
+                    </li> */}
                     <li>
                         <a href="/topics">Topics</a>
                     </li>

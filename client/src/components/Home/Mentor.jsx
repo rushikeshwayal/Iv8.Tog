@@ -4,7 +4,7 @@ function Mentor() {
   return (
     <div className="mt-12 flex flex-col items-center " id="mentor-section">
       {/* Heading */}
-      <p className="text-4xl font-medium  text-white mb-20" id="mentor-heading">Team Member`s</p>
+      <p className="text-4xl font-medium  text-white mb-20" id="mentor-heading">Mentor&#39;s</p>
       
       {/* Mentor Images */}
       <div className="flex justify-evenly items-center w-full  h-96">
